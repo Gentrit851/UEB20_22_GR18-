@@ -1,31 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Moti ne Peje</title>
 </head>
 <style>
-    h1{
-        color:white;
-        font-family: fantasy;
-        word-spacing:2px;
-        
-    }
-    h2,h3{
+   
+    h2{
         color:white;
         border:1px solid blue;
         width: 600px;
-        height:30px;
+        height:40px;
         background-color: lightblue;
     }
-    div{
-      background-image: url('https://th.bing.com/th/id/OIP.QXYu8JqMdwfnNnAlDTuoGQHaFN?pid=ImgDet&rs=1');
-      
-    }
+    
     ul{
      list-style-type: none;
     }
@@ -44,12 +35,11 @@
     }
     table{
         background-color: white;
-        height: 210px;
+        height: 260px;
         width:600px;
     }
     .divScroll{
         overflow-x: scroll;
-        height: 210px;
         width: 600px;
         color:blue;
     }
@@ -58,30 +48,56 @@
         height: auto;
         text-align: center;
     }
-    #Monday,#Tuesday,#Wednesday,#Thursday,#Friday,#Saturday,#Sunday{
-        text-align: center;
-        border:2px solid blue;
-        border-radius: 12px;
-        padding: 5px;
-        width: 600px;
-        
-       
-    }
+   iframe{
+    border:none;
+    width: 650px;
+    height: 260px; 
+    
+   }
+   #container{
+    width: 50px;
+  height: 10px;
+  position: absolute;
+  background: blue;
+   }
+   #animate{
+    position:relative;
+    background-color: lightskyblue;
+    width:auto;
+    height:100px;
+   }
+   .navbar{
+    height:50px;
+   }   
+   th,td{
+    border-left:2px dashed lightgrey;
+   } 
 </style>
 <body>
-    <div>
-    <h1>Peja</h1>
-    <button onclick="this.innerHTML=Date()">Today is</button>
-    
-    <ul>
-        <li><a class="first" href="#Current Weather">CURRENT WEATHER</a></li>
-        <li><a class="first" href="#Forecast">FORECAST</a></li>
-    </ul>
-</div>
-<br>
-<br>
-<h2  >Weather for the next 24 hours</h2>
-<div id="Current Weather" class="divScroll">
+    <div class="container mt-3">
+        <h1>Peja</h1>
+        <p id='A'></p>
+        <script>
+       document.getElementById('A').innerHTML=Date();
+    </script>
+      </div>
+
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#Current Weather">Current Weather</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Forecast">Forecast</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <br>
+    <br>
+<h2 id="Current Weather" >Weather for the next 24 hours</h2>
+<div class="divScroll">
 <table >
     <tr>
         <th>00:00</th>
@@ -226,285 +242,42 @@
     
     <table >
         <tr>
-        <th><a href ="#Monday">MO</a></th>
-        <th ><a href="#Tuesday">TU</a></th>
-        <th><a href="#Wednesday">WE</a></th>
-        <th><a href="#Thursday">TH</a></th>
-        <th><a href="#Friday">FR</a></th>
-        <th><a href="#Saturday">SA</a></th>
-        <th><a href="#Sunday">SU</a></th>
+        <th ><a href="Monday.html" target="iframe_a">Monday</a></th>
+        <th ><a href="Tuesday.html" target="iframe_a">Tuesday</a></th>
+        <th ><a href="Wednesday.html"target="iframe_a">Wednesday</a></th>
+        <th ><a href="Thursday.html" target="iframe_a">Thursday</a></th>
+        <th ><a href="Friday.html"target="iframe_a">Friday</a></th>
+        <th ><a href="Saturday.html"target="iframe_a">Saturday</a></th>
+        <th ><a href="Sunday.html" target="iframe_a">Sunday</a></th>
         </tr>
         <tr>
-<td><a  href="#Monday"><img width="40" height="40" src="https://th.bing.com/th/id/OIP.K5QJvFGV-_uh7_LrEmRKeAHaHa?w=226&h=220&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Sunny"></a></td>
-<td><a  href="#Tuesday"><img width="40" height="40" src="https://th.bing.com/th/id/OIP.IpcfLmJuYsYS7wiJoMBiaQHaHa?w=187&h=187&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Rainy"></a></td>
-<td><a  href="#Wednesday"><img width="40" height="40" src="https://th.bing.com/th/id/OIP.IpcfLmJuYsYS7wiJoMBiaQHaHa?w=187&h=187&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Rainy"></a></td>
-<td><a  href="#Thursday"><img width="40" height="40" src="https://th.bing.com/th/id/OIP.IpcfLmJuYsYS7wiJoMBiaQHaHa?w=187&h=187&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="rainy"></a></td>
-<td><a  href="#Friday"><img width="40" height="40" src="https://th.bing.com/th/id/OIP.IpcfLmJuYsYS7wiJoMBiaQHaHa?w=187&h=187&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="rainy"></a></td>
-<td><a  href="#Saturday"><img width="40" height="40" src="https://th.bing.com/th/id/OIP.IpcfLmJuYsYS7wiJoMBiaQHaHa?w=187&h=187&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="rainy"></a></td>
-<td><a  href="#Sunday"><img width="40" height="40" src="https://th.bing.com/th/id/OIP.IpcfLmJuYsYS7wiJoMBiaQHaHa?w=187&h=187&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="rainy"></a></td>
+<td><img width="40" height="40" src="https://th.bing.com/th/id/OIP.K5QJvFGV-_uh7_LrEmRKeAHaHa?w=226&h=220&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Sunny"></td>
+<td><img width="40" height="40" src="https://th.bing.com/th/id/OIP.IpcfLmJuYsYS7wiJoMBiaQHaHa?w=187&h=187&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Rainy"></td>
+<td><img width="40" height="40" src="https://th.bing.com/th/id/OIP.IpcfLmJuYsYS7wiJoMBiaQHaHa?w=187&h=187&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="Rainy"></td>
+<td><img width="40" height="40" src="https://th.bing.com/th/id/OIP.IpcfLmJuYsYS7wiJoMBiaQHaHa?w=187&h=187&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="rainy"></td>
+<td><img width="40" height="40" src="https://th.bing.com/th/id/OIP.IpcfLmJuYsYS7wiJoMBiaQHaHa?w=187&h=187&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="rainy"></td>
+<td><img width="40" height="40" src="https://th.bing.com/th/id/OIP.IpcfLmJuYsYS7wiJoMBiaQHaHa?w=187&h=187&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="rainy"></td>
+<td><img width="40" height="40" src="https://th.bing.com/th/id/OIP.IpcfLmJuYsYS7wiJoMBiaQHaHa?w=187&h=187&c=7&r=0&o=5&dpr=1.9&pid=1.7" alt="rainy"></td>
 </tr>
 <tr>
-    <td><a href="#Monday"> 6°C</a></td>
-    <td><a href="#Tuesday"> 6°C</a></td>
-    <td><a href="#Wednesday"> 8°C</a></td>
-    <td><a href="#Thursday"> 6°C</a></td>
-    <td><a href="#Friday"> 6°C</a></td>
-    <td><a href="#Saturday">6°C</a></td>
-    <td><a href="#Sunday"> 6°C</a></td>
-
+    <td> 6°C</td>
+    <td> 6°C</td>
+    <td> 8°C</td>
+    <td> 6°C</td>
+    <td> 6°C</td>
+    <td>6°C</td>
+    <td> 6°C</td>
 
 </tr>
     </table>
     </div>
-<h3>Monday</h3>
-<div id="Monday" >
-    <table>
-        <tr>
-            <th>Time</th>
-            <th></th>
-            <th>Temperature</th>
-            <th>Wind</th>
-        </tr>
-        <tr>
-            <td >15:00</td>
-               <td><img width="40" height="40" src="https://motilokal.com/themes/motilokal/assets/images/Pjeserisht%20me%20re%20-%20Dite.svg" alt="Pjeserisht me re">
-            </td>
-            <td>10°C</td>
-            <td>1m/s-0.8</td>
-        </tr>
-        <tr>
-            <td >18:00</td>
-                <td><img width="40" height="40" src="https://motilokal.com/themes/motilokal/assets/images/Pjeserisht%20me%20re%20-%20Nate.svg" alt="Pjeserisht me re">
-            </td>
-            <td>10°C</td>
-            <td>1m/s-0.8</td>
-        </tr>
-        <tr>
-            <td>21:00</td>
-               <td> <img width="40" height="40" src="https://motilokal.com/themes/motilokal/assets/images/Pjeserisht%20me%20re%20-%20Nate.svg" alt="Pjeserisht me re">
-            </td>
-            <td>11°C</td>
-            <td>1m/s-0.8</td>
-        </tr>
-        <tr>
-            <td>00:00</td>
-            <td><img width="40" height="40" src="https://motilokal.com/themes/motilokal/assets/images/Pjeserisht%20me%20re%20-%20Nate.svg" alt="">
-            </td>
-            <td>11°C</td>
-            <td>1m/s-1</td>
-        </tr>
-    </table>
-    </div>
-    <h3>Tuesday</h3>
-<div id="Tuesday" >
-    <table>
-        <tr>
-            <th>Time</th>
-            <th> </th>
-            <th>Temperature</th>
-            <th>Wind</th>
-        </tr>
-        <tr>
-            <td>15:00</td>
-            <td><img width="40" height="40" src="https://motilokal.com/themes/motilokal/assets/images/Pothuajse%20i%20kthjellet%20-%20Dite.svg" alt="Pothuajse i kthjellet"></td>
-            <td>8°C</td>
-            <td>1m/s-0.8</td>
-        </tr>
-        <tr>
-            <td>18:00</td>
-            <td><img width="40" height="40" src="https://motilokal.com/themes/motilokal/assets/images/Mot%20i%20kthjelletDite.svg" alt="I kthjellet"></td>
-            <td>12°C</td>
-            <td>1m/s-0.9</td>
-        </tr>
-        <tr>
-            <td>21:00</td>
-            <td><img width="40" height="40" src="https://motilokal.com/themes/motilokal/assets/images/Mot%20i%20kthjelletNate2.svg" alt="I kthjellet"></td>
-            <td>8°C</td>
-            <td>1m/s-1.3</td>
-        </tr>
-        <tr>
-            <td>00:00</td>
-            <td><img width="40" height="40" src="https://motilokal.com/themes/motilokal/assets/images/Mot%20i%20kthjelletNate2.svg" alt="I kthjellet"></td>
-            <td>8°C</td>
-            <td>1m/s-0.9</td>
-        </tr>
-    </table>
-</div>
-<h3>Wednesday</h3>
-<div id="Wednesday">
-    <table>
-        <tr>
-            <th>Time</th>
-            <th> </th>
-            <th>Temperature</th>
-            <th>Wind</th>
-        </tr>
-        <tr>
-            <td>15:00</td>
-            <td><img width="40" height="40" src="https://motilokal.com/themes/motilokal/assets/images/Pothuajse%20i%20kthjellet%20-%20Dite.svg" alt="Pothuajse i kthjellet"></td>
-            <td>6°C</td>
-            <td>1m/s-0.7</td>
-        </tr>
-        <tr>
-            <td>18:00</td>
-            <td><img width="40" height="40" src="https://motilokal.com/themes/motilokal/assets/images/Pothuajse%20i%20kthjellet%20-%20Dite.svg" alt="Pothuajse i kthjellet"></td>
-            <td>9°C</td>
-            <td>1m/s-1</td>
-        </tr>
-        <tr>
-            <td>21:00</td>
-            <td><img width="40" height="40" src="https://motilokal.com/themes/motilokal/assets/images/Mot%20i%20kthjelletNate2.svg" alt="I kthjellet"></td>
-            <td>7°C</td>
-            <td>1m/s-0.6</td>
-        </tr>
-        <tr>
-            <td>00:00</td>
-            <td><img width="40" height="40" src="https://motilokal.com/themes/motilokal/assets/images/Mot%20i%20kthjelletNate2.svg" alt="I kthjellet"></td>
-            <td>3°C</td>
-            <td>1m/s-0.9</td>
-        </tr>
+    <iframe name="iframe_a"></iframe>
+
+    
+
+  
+    
+   
         
-    </table>
-    </div>
-    <h3>Thursday</h3>
-<div id="Thursday">
-    <table>
-        <tr>
-            <th>Time</th>
-            <th> </th>
-            <th>Temperature</th>
-            <th>Wind</th>
-        </tr>
-        <tr>
-            <td>15:00</td>
-            <td><img width="40" height="40" src="https://motilokal.com/themes/motilokal/assets/images/Mot%20i%20kthjelletDite.svg" alt="I kthjellet"></td>
-            <td>5°C</td>
-            <td>1m/s-0.9</td>
-        </tr>
-        <tr>
-            <td>18:00</td>
-            <td><img width="40" height="40"  src="https://motilokal.com/themes/motilokal/assets/images/Pjeserisht%20me%20re%20-%20Dite.svg" alt="Pjeserisht me re"></td>
-            <td>10°C</td>
-            <td>1m/s-0.5</td>
-        </tr>
-        <tr>
-            <td>21:00</td>
-            <td><img width="40" height="40"  src="https://motilokal.com/themes/motilokal/assets/images/Pjeserisht%20me%20re%20-%20Dite.svg" alt="Pjeserisht me re"></td>
-            <td>15°C</td>
-            <td>1m/s-1.2</td>
-        </tr>
-        <tr>
-            <td>00:00</td>
-            <td><img width="40" height="40"  src="https://motilokal.com/themes/motilokal/assets/images/Pjeserisht%20me%20re%20-%20Nate.svg" alt="Pothuajse i kthjellet"></td>
-            <td>5°C</td>
-            <td>1m/s-1.2</td>
-        </tr>
-    </table>
-    </div>
-    <h3>Friday</h3>
-<div id="Friday">
-    <table>
-        <tr>
-            <th>Time</th>
-            <th> </th>
-            <th>Temperature</th>
-            <th>Wind</th>
-        </tr>
-        <tr>
-            <td>15:00</td>
-            <td><img width="40" height="40"  src="https://motilokal.com/themes/motilokal/assets/images/Mot%20i%20kthjelletDite.svg" alt="I kthjellet"></td>
-            <td>7°C</td>
-            <td>1m/s-1.1</td>
-        </tr>
-        <tr>
-            <td>18:00</td>
-            <td><img width="40" height="40"  src="https://motilokal.com/themes/motilokal/assets/images/Mot%20i%20kthjelletDite.svg" alt="I kthjellet"></td>
-            <td>10°C</td>
-            <td>1m/s-0.9</td>
-        </tr>
-        <tr>
-            <td>21:00</td>
-            <td><img width="40" height="40"  src="https://motilokal.com/themes/motilokal/assets/images/Mot%20i%20kthjelletNate2.svg" alt="I kthjellet"></td>
-            <td>6°C</td>
-            <td>1m/s-0.9</td>
-        </tr>
-        <tr>
-            <td>00:00</td>
-            <td><img width="40" height="40"  src="https://motilokal.com/themes/motilokal/assets/images/Mot%20i%20kthjelletNate2.svg" alt="I kthjellet"></td>
-            <td>8°C</td>
-            <td>1m/s-0.8</td>
-        </tr>
-    </table>
-    </div>
-    <h3>Saturday</h3>
-    <div id="Saturday" >
-        <table>
-            <tr>
-                <th>Time</th>
-                <th> </th>
-                <th>Temperature</th>
-                <th>Wind</th>
-            </tr>
-            <tr>
-                <td>15:00</td>
-                <td><img width="40" height="40"  src="https://motilokal.com/themes/motilokal/assets/images/Pothuajse%20i%20kthjellet%20-%20Dite.svg" alt="Pothuajse i kthjellet"></td>
-                <td>7°C</td>
-                <td>1m/s-0.6</td>
-            </tr>
-            <tr>
-                <td>18:00</td>
-                <td><img width="40" height="40"  src="https://motilokal.com/themes/motilokal/assets/images/Pjeserisht%20me%20re%20-%20Dite.svg" alt="Pjeserisht me re"></td>
-                <td>8°C</td>
-                <td>1m/s-0.9</td>
-            </tr>
-            <tr>
-                <td>21:00</td>
-                <td><img width="40" height="40"  src="https://motilokal.com/themes/motilokal/assets/images/Mot%20i%20kthjelletNate2.svg" alt="I kthjellet"></td>
-                <td>7°C</td>
-                <td>1m/s-0.9</td>
-            </tr>
-            <tr>
-                <td>00:00</td>
-                <td><img width="40" height="40"  src="https://motilokal.com/themes/motilokal/assets/images/Mot%20i%20kthjelletNate2.svg" alt="I kthjellet"></td>
-                <td>7°C</td>
-                <td>1m/s-0.6</td>
-            </tr>
-        </table>
-        </div>
-        <h3>Sunday</h3>
-        <div id="Sunday">
-            <table>
-                <tr>
-                    <th>Time</th>
-                    <th> </th>
-                    <th>Temperature</th>
-                    <th>Wind</th>
-                </tr>
-                <tr>
-                    <td>15:00</td>
-                    <td><img width="40" height="40"  src="https://motilokal.com/themes/motilokal/assets/images/Pothuajse%20i%20kthjellet%20-%20Dite.svg" alt="Pothuajse i kthjellet"></td>
-                    <td>6°C</td>
-                    <td>1m/s-1.1</td>
-                </tr>
-                <tr>
-                    <td>18:00</td>
-                    <td><img width="40" height="40"  src="https://motilokal.com/themes/motilokal/assets/images/Pothuajse%20i%20kthjellet%20-%20Dite.svg" alt="Pothuajse i kthjellet"></td>
-                    <td>8°C</td>
-                    <td>1m/s-0.9</td>
-                </tr>
-                <tr>
-                    <td>21:00</td>
-                    <td><img width="40" height="40"  src="https://motilokal.com/themes/motilokal/assets/images/Pjeserisht%20me%20re%20-%20Nate.svg" alt="Pjeserisht me re"></td>
-                    <td>3°C</td>
-                    <td>1m/s-0.9</td>
-                </tr>
-                <tr>
-                    <td>00:00</td>
-                    <td><img width="40" height="40"  src="https://motilokal.com/themes/motilokal/assets/images/Mot%20i%20kthjelletNate2.svg" alt="I kthjellet"></td>
-                    <td>6°C</td>
-                    <td>1m/s-0.8</td>
-                </tr>
-            </table>
-            </div>
 </body>
 </html>

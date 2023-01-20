@@ -4,7 +4,13 @@ function verifyPassword() {
 
     //check empty password field  
     if (pw == "") {
-        alert( "**Jepni passwordin ju lutem");
+        try {
+           alert( "**Jepni passwordin ju lutem");
+           }
+         catch(err) {
+             document.getElementById("password").innerHTML = err.message;
+            }
+        
         return false;
     }
 

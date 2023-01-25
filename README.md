@@ -1,2 +1,2 @@
-# UEB20_22_GR18-18
+# UEB20_22_GR17
 Weather Forecast Website only for Kosovo

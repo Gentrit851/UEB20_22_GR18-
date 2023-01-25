@@ -1,0 +1,9 @@
+.nav-link ,.nav-item  {
+    color:white ;
+}
+.navbar {
+    border-bottom: 2px solid white;
+}
+.dropdown-item{
+    color: black;
+}

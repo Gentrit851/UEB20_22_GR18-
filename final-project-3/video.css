@@ -1,0 +1,13 @@
+.video-placeholder {
+    margin: 50px 0 ;
+    background-color: #424960; 
+    padding: 50px 0;
+}
+
+.video-container {
+    margin: 50px 0 ;
+}
+
+.video-container video {
+    border: solid 2px wheat;
+}
